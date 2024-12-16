@@ -98,3 +98,37 @@ terraform/
 │       ├── outputs.tf
 ```
 
+## Recursos e Custos Estimados
+
+### **EC2 Instance**
+- Tipo: `t2.micro`
+- Uso: 730 horas/mês (24/7)
+- **Custo Estimado:** ~$8.28/mês
+
+### **S3 Bucket**
+- Armazenamento: 10 GB
+- Versionamento habilitado e ciclo de vida configurado.
+- Transferência de dados: 1 GB/mês
+- **Custo Estimado:** ~$0.25/mês
+
+### **RDS MySQL**
+- Tipo: `db.t3.micro`
+- Armazenamento: 20 GB (General Purpose SSD)
+- Backups habilitados (7 dias)
+- **Custo Estimado:** ~$12.91/mês
+
+### **Elastic IP (opcional)**
+- Elastic IP associado à EC2
+- **Custo Estimado:** ~$3.60/mês
+
+## **Custo Total Estimado**
+| Recurso              | Custo Mensal Estimado |
+|----------------------|------------------------|
+| EC2 Instance         | ~$8.28                |
+| S3 Bucket            | ~$0.25                |
+| RDS MySQL Instance   | ~$12.91               |
+| Elastic IP (opcional)| ~$3.60                |
+| **Total Estimado**   | **~$25.04/mês**       |
+
+---
+
