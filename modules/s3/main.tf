@@ -2,10 +2,6 @@ resource "aws_s3_bucket" "bucket" {
   bucket = var.bucket_name
   acl    = "private"
 
-  versioning {
-    enabled = true
-  }
-
   lifecycle_rule {
     enabled = true
     noncurrent_version_expiration {
