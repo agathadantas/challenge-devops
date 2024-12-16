@@ -1,10 +1,10 @@
 terraform {
   backend "s3" {
-    bucket         = "desafio-tecnico-s3" 
-    key            = "terraform/state/terraform.tfstate" 
-    region         = "us-east-1"                
-    encrypt        = true                               
-    dynamodb_table = "terraform-locks"                  
+    bucket         = "desafio-tecnico-s3"
+    key            = "terraform/state/terraform.tfstate"
+    region         = "us-east-1"
+    encrypt        = true
+    dynamodb_table = "terraform-locks"
   }
 }
 
@@ -22,7 +22,7 @@ module "s3" {
 
 module "ec2" {
   source = "./modules/ec2"
-  ami_id          = "ami-0c02fb55956c7d316" 
+  ami_id          = "ami-0c02fb55956c7d316"
   instance_type   = "t2.micro"
   public_subnet_id = module.vpc.public_subnets[0]
   security_group_ids = [module.vpc.sg_ec2]
