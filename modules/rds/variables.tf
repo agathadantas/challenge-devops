@@ -17,7 +17,6 @@ variable "db_name" {
   }
 }
 
-
 variable "db_username" {
   description = "Username for the RDS database"
   type        = string
