@@ -30,9 +30,3 @@ resource "aws_s3_bucket_public_access_block" "block_public_access" {
   ignore_public_acls      = true
   restrict_public_buckets = true
 }
-
-resource "aws_s3_bucket_logging" "bucket_logs" {
-  bucket        = aws_s3_bucket.bucket.id
-  target_bucket = var.logging_bucket_name
-  target_prefix = "logs/"
-}
