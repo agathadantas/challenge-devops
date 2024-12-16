@@ -63,7 +63,7 @@ cd challenge-devops
 ```bash
 rds_username = "admin"
 rds_password = "senhaSegura123"
-candidate_ip = "SEU_IP/32" # Substitua pelo seu IP público
+candidate_ip = "SEU_IP/32"
 ```
 3. Inicialize o Terraform, faça o planejamento e aplique as mudanças:
 ```bash
@@ -78,7 +78,7 @@ terraform/
 ├── main.tf
 ├── variables.tf
 ├── outputs.tf
-├── terraform.tfvars        #Variáveis sensíveis
+├── terraform.tfvars
 ├── modules/
 │   ├── vpc/
 │   │   ├── main.tf
