@@ -3,7 +3,6 @@ resource "aws_instance" "ec2" {
   instance_type = var.instance_type
   subnet_id     = var.public_subnet_id
   security_groups = var.security_group_ids
-
   iam_instance_profile = aws_iam_instance_profile.ec2_profile.name
 }
 
